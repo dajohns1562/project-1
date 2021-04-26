@@ -1,0 +1,10 @@
+<h1>Home</h1>
+
+<div class="tweet-container">
+  <h1>New Tweet</h1>
+  <%= form_for Tweet.new do |f| %>
+  <%= f.text_field :content %>
+  <%= f.submit %>
+  <% end %>
+
+</div>
