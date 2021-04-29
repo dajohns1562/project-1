@@ -11,6 +11,12 @@ class TweetsController < ApplicationController
     redirect_to root_path
   end
 
+  def destroy
+    @tweet = Tweet.find params[:id]
+    planet.destroy
+    redirect_to planets_path
+  end
+
   private
   def tweet_params
     params.require(:tweet).permit(:content)
