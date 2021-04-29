@@ -12,9 +12,9 @@ class TweetsController < ApplicationController
   end
 
   def destroy
-    @tweet = Tweet.find params[:id]
-    planet.destroy
-    redirect_to planets_path
+    tweet = Tweet.find params[:id]
+    tweet.destroy
+    redirect_to root_path
   end
 
   private

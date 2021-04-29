@@ -1,16 +1,19 @@
-<%= form_for @current_user do |f| %>
-
-  <%= f.label :email %>
-  <%= f.email_field :email, :value => @user.email %>
-
-  <%= f.label :handle %>
-  <%= f.text_field :username, :value => @user.username %>
-
-  <%= f.label :name %>
-  <%= f.text_field :name, :value => @user.name %>
-
-  <%= f.label :image %>
-  <%= f.text_field :image, :value => @user.image %>
-
-  <%= f.submit "Update Profile" %>
-<% end %>
+  <%= form_for @current_user do |f|%>
+    <div class="form-group">
+      <%= f.label :email %>
+      <%= f.email_field :email, :value => @user.email, :class => "form-control" %>
+    </div>
+    <div class="form-group">
+      <%= f.label :handle %>
+      <%= f.text_field :username, :value => @user.username, :class => "form-control" %>
+    </div>
+    <div class="form-group">
+      <%= f.label :name %>
+      <%= f.text_field :name, :value => @user.name,:class => "form-control" %>
+    </div>
+    <div class="form-group">
+      <%= f.label :image %>
+      <%= f.text_field :image, :value => @user.image, :class => "form-control" %>
+    </div>
+    <%= f.submit "Update Profile", :class => "btn-primary" %>
+  <% end %>

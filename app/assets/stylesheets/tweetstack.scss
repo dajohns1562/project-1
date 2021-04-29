@@ -1,3 +1,22 @@
+nav {
+  margin-bottom: 1em;
+}
+
+nav h5 {
+  display: inline;
+  padding: 0.5em;
+}
+
+nav h5 a {
+  text-decoration: none;
+}
+
+nav h5 a:hover {
+  background-color: #1da1f2;
+  border-radius: 10%;
+  padding: 2px;
+}
+
 .logo-thumb {
   max-width: 40px;
   margin-top: 1em;
@@ -5,10 +24,10 @@
 
 .tweet-thumb {
   max-width: 100%;
+  border-radius: 50%;
 }
 
 .tweet {
-  border: 1px solid lightgrey;
   display: inline-block;
   margin-top: 1em;
 }
@@ -16,16 +35,6 @@
 #middle-column {
  border-left: 1px solid lightgrey;
  border-right: 1px solid lightgrey;
-}
-
-#left-column h5 {
-  margin-top: 1em;
-}
-
-#left-column h5 a {
-  color: #1da1f2;
-  text-decoration: none;
-  padding: 0.5em;
 }
 
 #left-column a:hover {
@@ -46,6 +55,7 @@
 }
 
 .btn-primary {
+  margin-top: 1em;
   background-color: #1da1f2;
   border-radius: 30px;
 }
@@ -63,6 +73,23 @@
   display: inline;
 }
 
-#tweet-delete {
-  
+.tweet .btn-danger {
+  margin-bottom: 1em;
+  border-radius: 12px;
+}
+
+h4 {
+  color: #6c6c6c;
+}
+
+.follow-thumb {
+  max-width: 80%;
+  border-radius: 50%;
+}
+
+.follow-button {
+  margin-top: 0.5em;
+  background-color: #1da1f2;
+  border: none;
+  color: white;
 }

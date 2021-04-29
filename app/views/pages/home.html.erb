@@ -1,9 +1,9 @@
 <div class="row">
   <div class="col-3" id="left-column">
     <img src="https://static01.nyt.com/images/2014/08/10/magazine/10wmt/10wmt-superJumbo-v4.jpg" alt="" class="logo-thumb">
-    <h5><%= link_to "Home", root_path %></h5>
   </div>
   <div class="col-5" id="middle-column">
+    <h4>Home</h4>
     <%= form_for Tweet.new do |f| %>
     <%= f.text_area :content, :wrap => "hard", :class => "tweet-input", :placeholder => "What's happening?"%>
     <div class="tweet-button">
@@ -15,6 +15,7 @@
 
       <% @tweets.each do |tweet|  %>
       <div class="tweet">
+      <hr>
         <div class="row">
           <div class="col-2">
             <img src="<%= tweet.user.image %>" alt="" class="tweet-thumb">
@@ -25,7 +26,7 @@
             </div>
             <p><%= tweet.content %></p>
             <% if tweet.user == @current_user %>
-            <button class="btn-danger">Delete</button>
+            <%= button_to 'delete', tweet_path(tweet.id), :method => 'delete', :class => 'btn-danger' %>
             <% end %>
           </div>
         </div>
@@ -37,6 +38,19 @@
 
   </div>
   <div class="col-4">
+    <h4>Who to follow</h4>
+    <% User.all.each do |user| %>
+    <div class="row">
+      <div class="col-3">
+        <img src="<%= user.image %>" alt="" class="follow-thumb">
+      </div>
+      <div class="col-9">
+        <%= user.name %>
+        <%= button_to 'Follow', relationships_path, :method => 'post', :params => { :followed_id => user.id}, :class => "btn-primary" %>
+      </div>
+      <hr>
+    </div>
+    <% end %>
   </div>
 
 </div>

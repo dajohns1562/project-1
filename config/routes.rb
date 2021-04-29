@@ -11,7 +11,7 @@ Rails.application.routes.draw do
 
   get '/users/edit' => 'users#edit'
 
-  resources :tweets, :only => [:new, :create]
+  resources :tweets, :only => [:new, :create, :destroy]
 
   resources :relationships, :only => [:new, :create, :destroy]
 
