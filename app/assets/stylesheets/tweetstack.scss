@@ -1,0 +1,68 @@
+.logo-thumb {
+  max-width: 40px;
+  margin-top: 1em;
+}
+
+.tweet-thumb {
+  max-width: 100%;
+}
+
+.tweet {
+  border: 1px solid lightgrey;
+  display: inline-block;
+  margin-top: 1em;
+}
+
+#middle-column {
+ border-left: 1px solid lightgrey;
+ border-right: 1px solid lightgrey;
+}
+
+#left-column h5 {
+  margin-top: 1em;
+}
+
+#left-column h5 a {
+  color: #1da1f2;
+  text-decoration: none;
+  padding: 0.5em;
+}
+
+#left-column a:hover {
+  background-color: #c9e5f0;
+  border-radius: 25px;
+}
+
+.tweet-input {
+  width: 100%;
+  height: 125px;
+  border: 1px solid lightgrey;
+  border-radius: 10px;
+}
+
+.tweet-button {
+  text-align: right;
+  margin-top: 1em;
+}
+
+.btn-primary {
+  background-color: #1da1f2;
+  border-radius: 30px;
+}
+
+.tweet-container {
+  margin-top: 1em;
+}
+
+#tweet-author {
+  font-weight: bold;
+  margin-top: 0.5em;
+}
+
+.top-line p {
+  display: inline;
+}
+
+#tweet-delete {
+  
+}

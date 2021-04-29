@@ -1,3 +1,3 @@
 class Tweet < ApplicationRecord
-  belongs_to :user, :optional => false
+  belongs_to :user, :optional => true
 end
