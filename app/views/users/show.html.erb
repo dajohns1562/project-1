@@ -17,7 +17,7 @@
       </div>
       <div class="col-10">
         <div class="top-line">
-          <p id="tweet-author"><%= tweet.user.name %></p>
+          <p id="tweet-author"><%= link_to "<%= tweet.user.name %>", user_path %></p>
         </div>
         <p><%= tweet.content %></p>
         <% if tweet.user == @current_user %>
