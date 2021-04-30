@@ -6,6 +6,10 @@ class UsersController < ApplicationController
     @users = User.all
   end
 
+  def show
+    @user = User.find params[:id]
+  end
+
   def new
     @user = User.new
   end
@@ -27,12 +31,13 @@ class UsersController < ApplicationController
 
   def update
     User.update user_params
-    redirect_to root_path
+    redirect_to user_path
   end
 
   private
   def user_params
-    params.require(:user).permit(:email, :password, :password_confirmation, :handle, :name, :image)
+    params.require(:user).permit(:email, :password, :password_confirmation, :handle, :name, :image, :bio)
   end
+
 
 end

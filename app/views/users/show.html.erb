@@ -1,0 +1,36 @@
+<div class="row">
+
+  <div class="col-3" id="left-column">
+
+  </div>
+
+  <div class="col-5" id="middle-column">
+    <img src="<%= @user.image %>" alt="" class="profile-image">
+    <h4 class="profile-name"><%= @user.name %></h4>
+    <p class="bio"><%= @user.bio %></p>
+    <p class="profile-subheading">Tweets</p>
+
+    <% @user.tweets.each do |tweet| %>
+    <div class="row">
+      <div class="col-2">
+        <img src="<%= tweet.user.image %>" alt="" class="tweet-thumb">
+      </div>
+      <div class="col-10">
+        <div class="top-line">
+          <p id="tweet-author"><%= tweet.user.name %></p>
+        </div>
+        <p><%= tweet.content %></p>
+        <% if tweet.user == @current_user %>
+        <%= button_to 'delete', tweet_path(tweet.id), :method => 'delete', :class => 'btn-danger' %>
+        <% end %>
+      </div>
+    </div>
+    <hr>
+    <% end %>
+  </div>
+
+  <div class="col-4" id="right-column">
+
+  </div>
+
+</div>

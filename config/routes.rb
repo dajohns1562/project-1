@@ -7,9 +7,9 @@ Rails.application.routes.draw do
   post '/login' => 'session#create'
   delete '/login' => 'session#destroy'
 
-  resources :users, :only => [:index, :new, :create, :update]
-
   get '/users/edit' => 'users#edit'
+  
+  resources :users, :only => [:index, :new, :show, :create, :update]
 
   resources :tweets, :only => [:new, :create, :destroy]
 
